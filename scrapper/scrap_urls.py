@@ -32,7 +32,7 @@ def write_files(start_page, end_page,
         if page_text:
             file_path = os.path.join(output_dir,
                                      f'extracted_text_page_{page_number}.txt')
-            with open(file_path, 'w') as f:
+            with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(page_text)
                 print(f"Text extracted from page {page_number} "
                       f"and saved to {file_path}")
